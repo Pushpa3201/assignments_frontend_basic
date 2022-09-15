@@ -1,0 +1,41 @@
+<html>
+<head> </head>
+<body>
+	<h3>  Welocme page</h3>
+	<hr></hr>	
+	Select favourite colors
+    <select id="t1">
+        <option>select</option>
+        <option>yellow</option>
+        <option>Blue</option>
+        <option>green</option>
+        <option>red</option>
+        <option>pink</option>
+        <option>orange</option>
+        <option>purple</option>
+        <option>violet</option>
+    </select>
+	<br></br>
+	<input type="button" onclick="f1()"   value="Set Item" />
+	<input type="button" onclick="f2()"   value="Get Item" />
+	<br></br>
+	<hr/>
+	<a href="storage2.html">Next Page</a>
+	
+	<script>	
+		function f1()
+		{
+			var obj = document.getElementById("t1");
+			localStorage.setItem("uid",  obj.value);
+			alert("color stored in webstorage.");
+		}	
+		
+		function f2()
+		{	
+			var str  =  localStorage.getItem("uid");
+			alert("color : " + str);
+		}
+		
+	</script>	 
+</body>
+</html>

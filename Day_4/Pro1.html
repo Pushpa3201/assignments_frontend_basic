@@ -1,0 +1,34 @@
+<html>
+    <head>       
+    </head>
+    <body>
+
+		<label>Product Name :</label>
+		<input  type="text"  id="t1"  />
+		 <br/><br/>
+        <label>Unit Price :</label>
+		<input  type="text"  id="t2"  />
+		 <br/><br/>
+         <label>Quantity :</label>
+		<input  type="text"  id="t3"  />
+		 <br/><br/>
+		<input type="button"   value="Get Total"   onclick="fn_getMessage()"  /> 
+        <p  id="p1">  </p>		
+	 
+		<script>
+					  function  fn_getMessage()
+					  {
+						 // 	alert("Hi"); 
+						 var textObj1 = document.getElementById("t2");
+                         var textObj2 = document.getElementById("t3");
+						 var paraObj = document.getElementById("p1"); 
+                         var a = textObj1.value*textObj2.value;
+                         var num1 = parseInt(textObj1.value)+parseInt(textObj2.value);
+						 paraObj.innerText  = "Total Amount : "  +  (textObj1.value)*(textObj2.value);
+                         paraObj.innerText  = "Total Amount : "  +  num1;    
+					    }
+		</script>
+      
+
+    </body>
+</html>

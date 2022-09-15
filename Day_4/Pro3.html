@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body bgcolor="" id="b1">
+        <h1>Displaying user selected background</h1>
+        <select id="s1" onchange="colors()">
+            <option>Blue</option>
+            <option>red</option>
+            <option>yellow</option>
+            <option>green</option>
+            <option>orange</option>
+            <option>pink</option>
+            <option>grey</option>
+        </select><br/>
+        <script >
+            function colors(){
+                var selObj = document.getElementById("s1");
+                localStorage.setItem("1",  selObj.value);
+                var str = localStorage.getItem("1");
+            }
+           document.body.style.backgroundColor="str"
+        </script>
+        
+    </body>
+</html>

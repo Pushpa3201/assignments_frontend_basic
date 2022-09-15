@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head> </head>
+<body>
+	<h3>  HTML5 Api - Web Storage Demo </h3>
+	<hr/>
+<input type="button"  onclick="f2()"  value="Get Item" />
+	<h1 id="x"></h1>
+	<hr/>
+	<a href="storage1.html">Prev. Page</a>	
+	<script>
+		function f2()
+		{	
+			var str  =localStorage.getItem("uid");
+			var obj  = document.getElementById("x");
+            document.body.style.backgroundColor = str;
+        }
+	</script>	 
+</body>
+</html>
