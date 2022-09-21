@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>MicroData</title>
+        <style>
+            header{
+                text-align: center;
+                color: black;
+                background-color: rgb(171, 171, 16);
+                font-size: xx-large;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                padding: 10px;
+                margin-bottom: 0;
+            }
+            article{
+                margin-top: 0;
+                background-color: black;
+                color: aqua;
+                padding: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            #para{
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+        <header>HTML</header>
+        <section>
+            <article>
+                <div itemscope>
+                    <span itemprop="logo"><img width="200px" src="logo.png"/></span>
+                    <br/><br/>
+
+                    <p>URL : <span itemprop="url"><a href="">Refresh</a></span></p>
+
+                    <p>Person : <span itemprop="person">WHATWG</span></p>
+
+                    <p> Place : <span itemprop="place">Internet</span></p>
+
+                    <p>Movie : <span itemprop="movie">YouTube/W3Schools</span></p>
+
+                    <p>Recipe : <span itemprop="recipe">CSS</span></p>
+
+                    <p>Restaurant : <span itemprop="Restaurant">Internet</span></p>
+
+                    <p id="para">
+                        HTML is the standard markup language for Web pages.<br/>
+                        With HTML you can create your own Website.<br/>
+                        HTML is easy to learn - You will enjoy it!
+                    </p>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
