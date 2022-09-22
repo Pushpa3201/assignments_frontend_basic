@@ -1,0 +1,40 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Working with JSON</h1><hr/>
+       
+       <!-- <input type="button" value="Stringify" onclick="ObjToStr()" /> -->
+        <input type="button" value="Get User Data" onclick="StrToObj()" />
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <img style="border:2px solid black"  src="" alt="" id="p6"/>
+        <script>
+            //function ObjToStr(){
+             //   var obj = { empno:101, ename:"Sam", job:"Analyst", salary:50000, deptno:20};
+              //  var str = JSON.stringify(obj);
+               // console.log(str);
+           // }
+           var p1 = document.getElementById("p1");
+           var p2 = document.getElementById("p2");
+           var p3 = document.getElementById("p3");
+           var p4 = document.getElementById("p4");
+           var p5 = document.getElementById("p5");
+           var p6 = document.getElementById("p6");
+            function StrToObj(){
+                var  str  =    '{"id":4,"email":"eve.holt@reqres.in","first_name":"Eve","last_name":"Holt","avatar":"https://reqres.in/img/faces/4-image.jpg"}';
+                var obj = JSON.parse(str);
+                console.log(obj);
+                p1.innerText= "User Id : "+obj.id;
+                p2.innerText= "First Name : "+obj.first_name;
+                p3.innerText= "Last Name : "+obj.last_name;
+                p4.innerText= "Email : "+obj.email;
+                p5.innerText= "Avatar: "
+                p6.src=obj.avatar;
+            }
+        </script>
+
+    </body>
+</html>

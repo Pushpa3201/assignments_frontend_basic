@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Working with JSON</h1><hr/>
+        <input type="button" value="Stringify" onclick="ObjToStr()" />
+        <input type="button" value="Parsing" onclick="StrToObj()" />
+
+        <script>
+            function ObjToStr(){
+                var objArr = [{ empno:101, ename:"Sam", job:"Analyst", salary:50000, deptno:20},
+                { empno:102, ename:"Anu", job:"Tester", salary:20000, deptno:21},
+                { empno:103, ename:"Ajay", job:"Developer", salary:100000, deptno:22},
+                { empno:104, ename:"Indu", job:"Supporter", salary:10000, deptno:23},
+                { empno:105, ename:"Sunil", job:"Consultant", salary:60000, deptno:24}];
+                var str = JSON.stringify(objArr);
+                console.log(str);
+            }
+            function StrToObj(){
+                var str = '[{"empno":101,"ename":"Sam","job":"Analyst","salary":50000,"deptno":20},{"empno":102,"ename":"Anu","job":"Tester","salary":20000,"deptno":21},{"empno":103,"ename":"Ajay","job":"Developer","salary":100000,"deptno":22},{"empno":104,"ename":"Indu","job":"Supporter","salary":10000,"deptno":23},{"empno":105,"ename":"Sunil","job":"Consultant","salary":60000,"deptno":24}]';
+                var obj = JSON.parse(str);
+                console.log(obj);
+            }
+        </script>
+
+    </body>
+</html>
