@@ -1,0 +1,61 @@
+<html>
+	<head></head>
+	
+	<body>
+		<h3>Storing User Preferences in LocalStorage</h3>
+		<hr/>
+		
+	<form>
+		<fieldset>
+			<legend>Customer Data</legend>
+			
+			Customer Name  :  <input type="text"  id="name"  name="name"  />
+			<br/><br/>
+			
+			Joined Date  :  <input type="date"  id="date"  name="date"  />
+			<br/><br/>
+			
+			Favourite Color :  <input type="color"  id="color"  name="color"  />
+			<br/><br/>
+			
+			<input type="button"  value="Save User Data"   onclick="fn_saveData()" />
+			<input type="button"  value="Delete User Data"  onclick="fn_deleteData()" />
+			
+		</fieldset>
+    </form>
+		<a href="Assign2.html">Go to Next Page</a>
+		<br/><br/>
+		
+		<script>
+				
+				function  fn_saveData()
+				{
+						 var  txtNameObj =  document.getElementById("name");
+						 var  txtDateObj =  document.getElementById("date");
+						 var  txtColorObj =  document.getElementById("color");
+						 						 
+						 var  userObj =  {name:txtNameObj.value, date:txtDateObj.value, color:txtColorObj.value};
+						 console.log(userObj);
+						 
+						 var  str  =  JSON.stringify( userObj );
+						 console.log(str);
+						 	
+						 localStorage.setItem("userData",  str);
+
+						alert("User details are stored in localStorage");
+				}
+				
+			
+				function   fn_deleteData()
+				{
+						// delete an item from localStorage
+						localStorage.removeItem("userData");
+						alert("User details are removed from localStorage");
+				}
+		
+		</script>
+		
+		
+	</body>
+
+</html>
